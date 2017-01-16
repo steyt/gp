@@ -4,3 +4,35 @@ box-sizing: border-box;
 *, *:before, *:after {
 box-sizing: inherit;
 }
+
+// Уберем отступы у body
+body {
+margin: 0;
+padding: 0;
+}
+// Сделаем секциям высоту на весь экран
+section {
+display: flex;
+height: 100vh;
+background-position: 50% 0;
+background-attachment: fixed; // Для того, чтобы фон не
+двигался
+background-size: cover;
+}
+// В каждую секцию положим фоновое изображение, которое будет
+скролится медленнее, чем сам контент
+.first {
+background-image: url("img/IMG10.jpg");
+}
+.second {
+background-image: url(img/IMG11.jpg);
+}
+.third {
+background-image: url(img/IMG12.jpg);
+}
+.title {
+margin: auto;
+font: bold 50px Arial;
+color: grey;
+text-transform: uppercase;
+}
