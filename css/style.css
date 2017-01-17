@@ -1,3 +1,8 @@
+/* Уберем отступы у body*/
+body {
+margin: 0;
+padding: 0;
+}
 html {
 box-sizing: border-box;
 }
@@ -5,11 +10,93 @@ box-sizing: border-box;
 box-sizing: inherit;
 }
 
-/* Уберем отступы у body*/
-body {
-margin: 0;
-padding: 0;
+@font-face {
+    font-family: TrajanPro-Regular;
+    src: url(../fonts/TrajanPro-Regular.ttf);
+} 
+h1 {
+    color: grey;
+    font-family:  TrajanPro-Regular, Courier New, Sans, Georgia, sans-serif;
+} 
+h4 {
+    padding-top: 30px;
+    color: white;
+    font-family:  TrajanPro-Regular, Courier New, Sans, Georgia, sans-serif;
 }
+
+a {
+    color: #aaa;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color:orange;
+}
+header {
+    position: fixed;
+    width:100%;
+    z-index: 1000;
+}
+
+#adr{
+    background-color: #2b2d2b;
+    color: #aaa;
+    font-family: Courier New, Verdana;
+    font-size: 10pt;
+    padding: 10px;
+}
+#rsd{
+    height: 2px;
+    background-color: #aaa; 
+}
+#col1 {
+    background-color: #2c5138;
+    text-align: center;
+    height: 265px;
+}
+#mask {
+    height: 265px;
+    position: relative;
+    overflow: hidden;
+}
+
+#mask::after {
+    background: transparent;
+    background: -moz-linear-gradient(top, rgba(44, 81, 56, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-linear-gradient(left, rgba(44, 81, 56, 4.0) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -o-linear-gradient(left, rgba(44, 81, 56, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -ms-linear-gradient(left, rgba(44, 81, 56, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(to left, rgba(44, 81, 56, 1.0) 0%, rgba(0, 0, 0, 0.1) 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#mask-left {
+    height: 265px;
+    position: relative;
+}
+
+#mask-left::after {
+    background: transparent;
+    background: -moz-linear-gradient(top, rgba(44, 81, 56, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-linear-gradient(right, rgba(44, 81, 56, 4.0) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -o-linear-gradient(right, rgba(44, 81, 56, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -ms-linear-gradient(right, rgba(44, 81, 56, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(to right, rgba(44, 81, 56, 1.0) 0%, rgba(0, 0, 0, 0.1) 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
 /* Сделаем секциям высоту на весь экран*/
 section {
 display: flex;

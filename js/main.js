@@ -5,3 +5,7 @@ $(window).scroll(function () {
 		coords = "50%" + scrollTop / speed + "px";
 	section.css('background-position', coords);
 });
+
+//ParallaxJS
+var scene = document.getElementById('scene');
+var parallax = new Parallax(scene);
