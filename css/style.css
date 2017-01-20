@@ -120,13 +120,13 @@ background-size: cover;
 background-image: url(../img/IMG10.jpg);
 }
 .second {
-background-image: url(../img/IMG11.jpg);
+background-image: url(../img/IMG19.jpg);
 }
 .third {
 background-image: url(../img/IMG12.jpg);
 }
 .contacts {
-background-image: url(../img/IMG15.jpg);
+background-image: url(../img/IMG17.jpg);
 }
 .title {
 margin: auto;
@@ -135,11 +135,11 @@ color:orange;
 text-transform: uppercase;
 }
 footer{
-	display: block;
     background-color: #2b2d2b;
     color: #aaa;
+    text-align: center;
     font-family: Courier New, Verdana;
-    padding: 5px 20px;
+    padding: 2px 17px;
 }
 @media screen and (max-width: 1475px) {
 	h1 {

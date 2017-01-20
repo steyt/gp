@@ -8,7 +8,7 @@
 	<link type="text/css" href="css/style.css" rel="stylesheet">
 	<title>GP</title>
 </head>
-<body>
+<body onload="initialize()">
 <header>
   <div class="container-fluid">
     <div id="adr" class="row">
@@ -18,7 +18,7 @@
             <div><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:office@gpartners.com.ua">office@gpartners.com.ua</a></div>
         </div>
         <div class="col-md-2"></div>
-        <div class=" col-sm-2 col-md-1">
+        <div class="hidden-xs col-sm-2 col-md-1">
           <div><a href="#" style="color: orange;">УКР</a>|<a href="#">EN</a></div>        
         </div>
     </div>
@@ -46,10 +46,13 @@
 <section class="third"></section>
 <section class="contacts"></section>
 <footer>
-	Copyright &copy; 2017 GP
+	<div class="row"><div class="col-md-12" id="map_canvas" style="height:400px"></div></div>
+    <div class="row"><div class="copyright">Copyright &copy; 2017 GP</div></div> 
 </footer>
 	
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=ru&amp;"></script>
+    <!--key=AIzaSyCRLERqMfMDGhOqwlCpNOwt5miyZvNpFgU-->
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
