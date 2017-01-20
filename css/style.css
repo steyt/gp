@@ -47,6 +47,10 @@ header {
     font-size: 0.9rem;
     padding: 5px 0px;
 }
+#adr div {
+	float:left;
+	padding-right: 10px;
+}
 #rsd{
     height: 2px;
     background-color: #aaa; 
@@ -121,11 +125,21 @@ background-image: url(../img/IMG11.jpg);
 .third {
 background-image: url(../img/IMG12.jpg);
 }
+.contacts {
+background-image: url(../img/IMG15.jpg);
+}
 .title {
 margin: auto;
 font: bold 3em Arial;
 color:orange;
 text-transform: uppercase;
+}
+footer{
+	display: block;
+    background-color: #2b2d2b;
+    color: #aaa;
+    font-family: Courier New, Verdana;
+    padding: 5px 20px;
 }
 @media screen and (max-width: 1475px) {
 	h1 {
