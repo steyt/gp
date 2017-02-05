@@ -16,6 +16,7 @@ function initialize() {
 	var settings = {
 		zoom: 15,
 		center: latlng,
+		scrollwheel: false,
 		mapTypeControl: true,
 		mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
 		navigationControl: true,

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap -->
-    <link type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="css/style.css" rel="stylesheet">
 	<title>GP</title>
 </head>
@@ -37,6 +37,29 @@
     <div class="row">
         <div  id="rsd" class="col-md-12"></div>    
     </div>
+    <ul id="gn-menu" class="gn-menu-main">
+        <li class="gn-trigger">
+            <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+            <nav class="gn-menu-wrapper">
+                <div class="gn-scroller">
+                    <ul class="gn-menu">
+                        <li><a href="#about" class="gn-icon gn-icon-article">Про компанію</a></li>
+                        <li><span class="gn-icon gn-icon-cog"  onclick="code();">Послуги</span>
+                            <ul>
+                                <li><a href="#service1" class="gn-icon gn-icon-cog">Юридичним</a></li>
+                                <li><a href="#service2" class="gn-icon gn-icon-cog">Фізичним</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#clients" class="gn-icon gn-icon-archive">Клієнти</a></li>
+                        <li><a href="#news" class="gn-icon gn-icon-download">Зв`язок</a></li>
+                        <li><a href="#contact" class="gn-icon gn-icon-earth">Контакти</a></li>
+                    </ul>
+                </div>
+                <!-- /gn-scroller -->
+            </nav>
+        </li>
+        <li style="width: 140px" id="glyphicon-home"><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+    </ul> 
   </div>
 </header>
 <section class="first" data-speed="3">
@@ -50,7 +73,7 @@
     <div class="row"><div class="copyright">Copyright &copy; 2017 GP</div></div> 
 </footer>
 	
-	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=ru&amp;"></script>
     <!--key=AIzaSyCRLERqMfMDGhOqwlCpNOwt5miyZvNpFgU-->
 	<script type="text/javascript" src="js/main.js"></script>
