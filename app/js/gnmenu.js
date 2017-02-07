@@ -99,3 +99,130 @@ $(document).ready(function() {
 	window.gnMenu = gnMenu;
 
 } )( window );
+
+
+/*!-------------------------------------------------------------------------
+ * classie - class helper functions
+ * from bonzo https://github.com/ded/bonzo
+ * 
+ * classie.has( elem, 'my-class' ) -> true/false
+ * classie.add( elem, 'my-new-class' )
+ * classie.remove( elem, 'my-unwanted-class' )
+ * classie.toggle( elem, 'my-class' )
+ */
+
+/*jshint browser: true, strict: true, undef: true */
+/*global define: false */
+
+( function( window ) {
+
+'use strict';
+
+// class helper functions from bonzo https://github.com/ded/bonzo
+
+function classReg( className ) {
+  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+}
+
+// classList support for class management
+// altho to be fair, the api sucks because it won't accept multiple classes at once
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+  hasClass = function( elem, c ) {
+    return elem.classList.contains( c );
+  };
+  addClass = function( elem, c ) {
+    elem.classList.add( c );
+  };
+  removeClass = function( elem, c ) {
+    elem.classList.remove( c );
+  };
+}
+else {
+  hasClass = function( elem, c ) {
+    return classReg( c ).test( elem.className );
+  };
+  addClass = function( elem, c ) {
+    if ( !hasClass( elem, c ) ) {
+      elem.className = elem.className + ' ' + c;
+    }
+  };
+  removeClass = function( elem, c ) {
+    elem.className = elem.className.replace( classReg( c ), ' ' );
+  };
+}
+
+function toggleClass( elem, c ) {
+  var fn = hasClass( elem, c ) ? removeClass : addClass;
+  fn( elem, c );
+}
+
+var classie = {
+  // full names
+  hasClass: hasClass,
+  addClass: addClass,
+  removeClass: removeClass,
+  toggleClass: toggleClass,
+  // short names
+  has: hasClass,
+  add: addClass,
+  remove: removeClass,
+  toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+  // AMD
+  define( classie );
+} else {
+  // browser global
+  window.classie = classie;
+}
+
+})( window );
+
+
+/*--------------------custom------------------------------------------*/
+(function ($) {
+
+	new gnMenu( document.getElementById( 'gn-menu' ) );
+
+
+	//jQuery for page scrolling feature - requires jQuery Easing plugin
+	$(function() {
+		$('.gn-menu li a').bind('click', function(event) {
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1500, 'easeInOutExpo');
+			event.preventDefault();
+		});
+		$('a.scroll').bind('click', function(event) {
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1500, 'easeInOutExpo');
+			event.preventDefault();
+		});
+	});
+
+	
+	//nivo lightbox
+	$('.gallery-item a').nivoLightbox({
+		effect: 'fadeScale',                             // The effect to use when showing the lightbox
+		theme: 'default',                           // The lightbox theme to use
+		keyboardNav: true,                          // Enable/Disable keyboard navigation (left/right/escape)
+		clickOverlayToClose: true,                  // If false clicking the "close" button will be the only way to close the lightbox
+		onInit: function(){},                       // Callback when lightbox has loaded
+		beforeShowLightbox: function(){},           // Callback before the lightbox is shown
+		afterShowLightbox: function(lightbox){},    // Callback after the lightbox is shown
+		beforeHideLightbox: function(){},           // Callback before the lightbox is hidden
+		afterHideLightbox: function(){},            // Callback after the lightbox is hidden
+		onPrev: function(element){},                // Callback when the lightbox gallery goes to previous item
+		onNext: function(element){},                // Callback when the lightbox gallery goes to next item
+		errorMessage: 'The requested content cannot be loaded. Please try again later.' // Error message when content can't be loaded
+	});
+
+	
+})(jQuery);
