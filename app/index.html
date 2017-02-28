@@ -11,15 +11,37 @@
 <body onload="initialize()">
 <header>
   <div class="container-fluid">
+  <nav id="gn-menu">
+        <ul class="gn-menu-main">
+            <li>
+                <a class="gn-icon gn-icon-menu"></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu" >
+                            <li><a href="#about" class="glyphicon glyphicon-home">Про компанію</a></li>
+                            <li><span class="glyphicon glyphicon-th-large"  onclick="code();">Послуги</span>
+                                <ul>
+                                    <li><a href="#service1" class="glyphicon glyphicon-fire">Юридичним</a></li>
+                                    <li><a href="#service2" class="glyphicon glyphicon-leaf">Фізичним</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#clients" class="glyphicon glyphicon-user">Клієнти</a></li>
+                            <li><a href="#news" class="glyphicon glyphicon-link">Зв`язок</a></li>
+                            <li><a href="#contact" class="glyphicon glyphicon-pencil">Контакти</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </li>
+        </ul>
+    </nav> 
     <div id="adr" class="row">
-        <div class="col-sm-10 col-md-9">
+        <div id="location" class="col-md-12">
         	<div><span class="glyphicon glyphicon-globe"></span> 01054, м.Київ, В.Липинського,12-б</div>  
             <div><span class="glyphicon glyphicon-phone-alt"></span> +38(044)246-42-06</div>  
             <div><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:office@gpartners.com.ua">office@gpartners.com.ua</a></div>
         </div>
-        <div class="col-md-2"></div>
-        <div class="hidden-xs col-sm-2 col-md-1">
-          <div><a href="#" style="color: orange;">УКР</a>|<a href="#">EN</a></div>        
+        <div id="lang">
+          <div><a href="#" style="color: #eb5d1e;">УКР</a>|<a href="#">EN</a></div>        
         </div>
     </div>
     <div class="row">
@@ -37,49 +59,28 @@
     <div class="row">
         <div  id="rsd" class="col-md-12"></div>    
     </div>
-    <ul id="gn-menu" class="gn-menu-main">
-        <li class="gn-trigger">
-            <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-            <nav class="gn-menu-wrapper">
-                <div class="gn-scroller">
-                    <ul class="gn-menu">
-                        <li><a href="#about" class="gn-icon gn-icon-article">Про компанію</a></li>
-                        <li><span class="gn-icon gn-icon-cog"  onclick="code();">Послуги</span>
-                            <ul>
-                                <li><a href="#service1" class="gn-icon gn-icon-cog">Юридичним</a></li>
-                                <li><a href="#service2" class="gn-icon gn-icon-cog">Фізичним</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#clients" class="gn-icon gn-icon-archive">Клієнти</a></li>
-                        <li><a href="#news" class="gn-icon gn-icon-download">Зв`язок</a></li>
-                        <li><a href="#contact" class="gn-icon gn-icon-earth">Контакти</a></li>
-                    </ul>
-                </div>
-                <!-- /gn-scroller -->
-            </nav>
-        </li>
-        <li style="width: 140px" id="glyphicon-home"><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
-    </ul> 
+    
   </div>
 </header>
-<section class="first" data-speed="3">
+<section id="about" class="first" data-speed="3">
 	<div class="title"><a href="paralax.html"> Parallax is cool</a></div>
 </section>
-<section class="second"></section>
-<section class="third"></section>
-<section id="#contact" class="contacts"></section>
+<section id="clients" class="second"></section>
+<section id="news" class="third"></section>
+<section id="contact" class="contacts"></section>
+
 <footer>
 	<div class="row"><div class="col-md-12" id="map_canvas" style="height:400px"></div></div>
     <div class="row"><div class="copyright">Copyright &copy; 2017 GP</div></div> 
 </footer>
 
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>	
-	<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=ru&amp;"></script>
-    <!--key=AIzaSyCRLERqMfMDGhOqwlCpNOwt5miyZvNpFgU-->
-    <script type="text/javascript" src="js/main.js"></script>
-    <!-- Головне меню -->
-    <script src="js/gnmenu.js"></script>
+</script>
+<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=ru&amp;"></script>
+<!--key=AIzaSyCRLERqMfMDGhOqwlCpNOwt5miyZvNpFgU-->
+<script type="text/javascript" src="js/main.js"></script>
+<!-- Головне меню -->
+<script src="js/gnmenu.js"></script>
 </body>
 </html>

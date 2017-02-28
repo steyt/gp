@@ -1,3 +1,4 @@
+//Паралакс
 var section = $('.first');
 $(window).scroll(function () {
 	var scrollTop = -($(window).scrollTop()),
@@ -9,6 +10,7 @@ $(window).scroll(function () {
 //ParallaxJS
 var scene = document.getElementById('scene');
 var parallax = new Parallax(scene);
+
 
 //google maps
 function initialize() {
